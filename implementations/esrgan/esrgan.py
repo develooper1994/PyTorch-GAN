@@ -202,8 +202,9 @@ def log_progress(batches_done, dataloader, discriminator, epoch, gen_hr, generat
 
 
 if __name__ == "__main__":
-    try:
-        esrgan()
-    except:
-        error("training stoped. Adjust batch_size carefully")
-        torch.cuda.empty_cache()
+    esrgan()
+    # try:
+    #     esrgan()
+    # except:
+    #     error("training stoped. Adjust batch_size carefully")
+    #     torch.cuda.empty_cache()
