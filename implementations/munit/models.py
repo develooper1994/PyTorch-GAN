@@ -1,8 +1,6 @@
+import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch
-from torch.autograd import Variable
-import numpy as np
 
 
 def weights_init_normal(m):

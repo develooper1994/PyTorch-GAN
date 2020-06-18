@@ -1,12 +1,18 @@
-from models import GeneratorRRDB
-from datasets import denormalize, mean, std
-import torch
-from torch.autograd import Variable
 import argparse
 import os
+
+import torch
+from PIL import Image
+from torch.autograd import Variable
 from torchvision import transforms
 from torchvision.utils import save_image
-from PIL import Image
+
+try:
+    from datasets import denormalize, mean, std
+    from models import GeneratorRRDB
+except:
+    from implementations.esrgan.datasets import denormalize
+    from implementations.esrgan.models import GeneratorRRDB
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--image_path", type=str, required=True, help="Path to image")
